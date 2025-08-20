@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <nav class="navbar">
+      <h1 class="logo">TaskFlow</h1>
+      <a href="#pricing" class="nav-btn">Get Started</a>
+    </nav>
+    <div class="hero-content">
+      <h2>Organize. Focus. Achieve.</h2>
+      <p>TaskFlow helps you stay on top of your tasks and collaborate with your team effortlessly.</p>
+      <button onclick="document.querySelector('#features').scrollIntoView({behavior:'smooth'})">
+        Learn More
+      </button>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="features section" id="features">
+    <h2>Features</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">✔</div>
+        <h3>Easy Management</h3>
+        <p>Create, edit, and track tasks seamlessly.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏰</div>
+        <h3>Smart Reminders</h3>
+        <p>Stay on schedule with timely alerts.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Team Collaboration</h3>
+        <p>Work together and share progress instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews section" id="reviews">
+    <h2>What People Say</h2>
+    <div class="grid">
+      <blockquote class="card">“TaskFlow doubled my productivity.” <br><b>- Sarah</b></blockquote>
+      <blockquote class="card">“Reminders keep me focused every day.” <br><b>- David</b></blockquote>
+      <blockquote class="card">“Perfect for team projects!” <br><b>- Emily</b></blockquote>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing section" id="pricing">
+    <h2>Pricing Plans</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Free</h3>
+        <p class="price">$0</p>
+        <ul>
+          <li>✔ Basic tasks</li>
+          <li>✔ 1 user</li>
+        </ul>
+      </div>
+      <div class="card popular">
+        <h3>Pro</h3>
+        <p class="price">$9/mo</p>
+        <ul>
+          <li>✔ Unlimited tasks</li>
+          <li>✔ Collaboration</li>
+          <li>✔ Reminders</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Team</h3>
+        <p class="price">$29/mo</p>
+        <ul>
+          <li>✔ Team dashboard</li>
+          <li>✔ File sharing</li>
+          <li>✔ Priority support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 TaskFlow | All rights reserved</p>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
