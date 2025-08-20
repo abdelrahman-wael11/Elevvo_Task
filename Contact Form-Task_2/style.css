@@ -1,0 +1,125 @@
+:root{
+  --bg: #0b1016;
+  --card: #111822;
+  --text: #e9eef4;
+  --muted: #98a2b3;
+  --accent: #4f9cff;
+  --accent-pressed: #3b7ddd;
+  --danger: #ff6b6b;
+  --ring: #9cc7ff;
+  --radius: 16px;
+  --gap: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: radial-gradient(1200px 800px at 80% -200px, #1c2736 0%, #0b1016 60%) no-repeat, var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  letter-spacing: 0.3px;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f1520;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #778296;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 4px rgba(79,156,255,0.15);
+}
+
+.error {
+  min-height: 18px; /* Reserve space so layout doesn’t jump */
+  font-size: 0.85rem;
+  color: var(--danger);
+  margin: 2px 0 0;
+}
+
+input.error-border, textarea.error-border {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 4px rgba(255,107,107,0.12);
+}
+
+.btn {
+  margin-top: 6px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-pressed));
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: transform .06s ease, filter .2s ease, box-shadow .2s ease;
+  box-shadow: 0 10px 24px rgba(79,156,255,0.24);
+}
+
+.btn:hover { filter: brightness(1.05); }
+.btn:active { transform: translateY(1px) scale(0.99); }
+
+.status {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #b5f7c5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  .card { padding: 20px; }
+  h1 { font-size: 1.3rem; }
+}
